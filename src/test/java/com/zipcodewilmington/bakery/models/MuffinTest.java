@@ -8,10 +8,12 @@ import org.junit.Test;
 import javax.persistence.Entity;
 
 public class MuffinTest {
+
     @Test
     public void testClassSignatureAnnotations() {
         Assert.assertTrue(Muffin.class.isAnnotationPresent(Entity.class));
     }
+
     @Test
     public void testCreateJson() throws JsonProcessingException {
         ObjectMapper jsonWriter = new ObjectMapper();

@@ -9,10 +9,12 @@ import javax.persistence.Entity;
 
 
 public class BakerTest {
+
     @Test
     public void testClassSignatureAnnotations() {
         Assert.assertTrue(Baker.class.isAnnotationPresent(Entity.class));
     }
+
     @Test
     public void testCreateJson() throws JsonProcessingException {
         ObjectMapper jsonWriter = new ObjectMapper();
