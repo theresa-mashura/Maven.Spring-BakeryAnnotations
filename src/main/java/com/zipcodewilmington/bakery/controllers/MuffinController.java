@@ -20,6 +20,8 @@ public class MuffinController {
         this.service = service;
     }
 
+    @RequestMapping(value = "/muffins/", method = RequestMethod.GET)
+    @ResponseBody
     public ResponseEntity<Iterable<Muffin>> index() {
         return new ResponseEntity<>(service.index(), HttpStatus.OK);
     }

@@ -17,6 +17,8 @@ public class BakerController {
         this.service = service;
     }
 
+    @RequestMapping(value = "/bakers/", method = RequestMethod.GET)
+    @ResponseBody
     public ResponseEntity<Iterable<Baker>> index() {
         return new ResponseEntity<>(service.index(), HttpStatus.OK);
     }
